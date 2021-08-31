@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Consumindo API Pokemon</title>
+
+	<!-- Permite inclusao de FLASK.url_for direto no js-->
+    {{ JSGlue.include() }}
+
+	<!-- Bootstrap CSS -->
+	<link  rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"  crossorigin="anonymous">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+<body>
+	<div class="container">
+		<div class="text-center py-4">
+			<img src="../static/img/pokeapi.png" alt="Image Logo PokeAPI">
+		</div>
+		<div>
+			<h5>Entre com o nome do Pokemon ou na barra de navegação, digite "/api/pokemon/" seguido do nome do pokemon</h5>
+			<form class="form-inline">
+				<div class="form-group mb-2">
+				  <label for="name">Nome:</label>
+				  <input type="text" class="form-control" id="name" placeholder="Entre com o nome do Pokemon">	
+				</div>
+				<button type="button" id="search" class="btn btn-primary mb-2" onclick="searchPokemon()">Pesquisar</button>			  
+			</form>
+
+			
+			<div class="msgErro text-center">
+				<p >Pokemon não encontrado</p>
+			</div>			
+
+			<div class="card ml-auto">
+				<img class="card-img-top" src="" alt="Pokemon image">
+				<div class="card-body">
+				  <h5 class="card-title"></h5>
+				  <p class="card-text">Habilidades:</p>
+				  <p class="card-text li"></p>				  
+				</div>
+			</div>
+			<div class="text-center">
+				<button type="button" id="newSearch" class="btn btn-primary mb-2" onclick="newSearchPokemon()">Nova pesquisa</button>			  
+			</div>
+		</div>
+	</div>	
+
+	<!-- Scripts Bootstrap -->
+	<script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"  crossorigin="anonymous"></script>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"  crossorigin="anonymous"></script>
+	<script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"  crossorigin="anonymous"></script>
+
+	<!-- Scripts Internos -->
+	<script src="../static/js/script.js"></script>
+
+</body>
+</html>

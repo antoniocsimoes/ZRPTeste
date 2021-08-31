@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form-inline {    
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.form-inline label {
+    font-weight: bold;
+}
+
+.form-inline .form-control{
+    width: 16rem;    
+    margin: 0px 10px;
+}
+
+.msgErro {
+    display: none;    
+}
+
+.msgErro p {
+    color: red;
+    font-weight: bold;
+}
+
+.card {    
+    display: none;
+    width: 18rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card .card-img-top {    
+    width: 12rem;
+    padding: 10px 0px;
+}
+
+.card .card-text {
+    font-weight: bold;
+}
+
+#newSearch {
+    display: none;
+}
